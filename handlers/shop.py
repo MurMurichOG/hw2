@@ -1,6 +1,6 @@
 from aiogram import F, types, Router
 from aiogram.filters import Command
-
+from table import get
 
 shop_router = Router()
 
