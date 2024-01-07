@@ -1,11 +1,13 @@
 import sqlite3
 from pathlib import Path
+from sqlite3 import Connection
 
 
+# noinspection PyGlobalUndefined
 def init():
     db_path = Path(__file__).parent.parent / "handlers.db"
     global db, cursor
-    db = sqlite3.connect(db_path)
+    db: Connection = sqlite3.connect(db_path)
     cursor = db.cursor()
 
 

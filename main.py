@@ -3,11 +3,11 @@ from aiogram import types
 import logging
 from handlers.start import start_router
 from hw4.bot import bot, dp
-from handlers.shop import shop_router
+from hw4.shop import shop_router
 from handlers.table import init, create, populate
 
 
-async def on_startup(dispatcher):
+async def on_startup():
     print('Online!')
     init()
     create()
